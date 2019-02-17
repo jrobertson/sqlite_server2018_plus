@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = 'sqlite_server2018_plus'
-  s.version = '0.1.0'
+  s.version = '0.1.1'
   s.summary = 'sqlite_server2018_plus'
   s.authors = ['James Robertson']
   s.files = Dir['lib/sqlite_server2018_plus.rb']

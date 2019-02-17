@@ -50,11 +50,15 @@ class SQLiteServer2018
         
   end
   
-  def load(dbfile)    
+  def load_db(dbfile)    
         
     puts 'inside SQLiteServer2018::load' if @debug
-    db_op { @db.load dbfile }
+    db_op { @db.load_db dbfile }
     
+  end
+  
+  def ping()
+    db_op { @db.ping }
   end
   
   def query(*args, &blk)
@@ -116,4 +120,3 @@ class SQLiteServer2018Plus
   end
 
 end
-

@@ -59,7 +59,7 @@ class SQLiteServer2018
   
   def ping()
     db_op { @db.ping }
-  end
+  end  
   
   def query(*args, &blk)
     
@@ -67,6 +67,18 @@ class SQLiteServer2018
     db_op { @db.query *args, &blk }
     
   end  
+  
+  def results_as_hash(*args)    
+    db_op { @db.results_as_hash *args }
+  end
+  
+  def results_as_hash=(*args)
+    db_op { @db.results_as_hash = *args }
+  end    
+  
+  def table_info(*args)
+    db_op { @db.table_info *args }
+  end    
 
 
   private

@@ -78,6 +78,10 @@ class SQLiteServer2018
   
   def table_info(*args)
     db_op { @db.table_info *args }
+  end
+  
+  def tables(dbfile)    
+    db_op { @db.tables dbfile }        
   end    
 
 

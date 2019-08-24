@@ -50,6 +50,10 @@ class SQLiteServer2018
         
   end
   
+  def fields(*args)
+    db_op { @db.fields *args }
+  end  
+  
   def load_db(dbfile)    
         
     puts 'inside SQLiteServer2018::load' if @debug
